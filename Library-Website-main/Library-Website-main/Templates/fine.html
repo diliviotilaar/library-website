@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Check</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="navbar" id="background-1">
+        <div class="logo">
+            <img src="../static/images/CIT Logo.png" alt="" style="height: 130px; width: 100px;">
+        </div>
+        <div style="margin: auto;">
+            <h1>Calvin Library</h1>
+        </div>
+        <div class="button-1">
+            <form action="logout">
+                <input type="submit" value="logout" style="height: 50px; width: 150px; font-size: x-large;">
+            </form>
+            <form action="staff">
+                <input type="submit" value="back" style="height: 50px; width: 150px; font-size: x-large;">
+            </form>
+        </div>
+    </div>
+    <h1 style="font-size: xx-large; text-align: center;">Daftar Peminjaman</h1>
+    <table class="borrow-table">
+        <tr>
+            <th>Nama Mahasiswa</th>
+            <th>Nama Buku</th>
+            <th>Tanggal Peminjaman</th>
+            <th>Tanggal Pengembalian</th>
+            <th>Denda</th>
+        </tr>
+        <tr>
+            {% for data in update_list %}
+            <td>{{ data }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    <a href="/staff">back</a>
+</body>
+</html>

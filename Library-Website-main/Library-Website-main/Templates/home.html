@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body>
+    <div class="navbar" id="background-1">
+        <div class="logo">
+            <img src="../static/images/CIT Logo.png" alt="" style="height: 130px; width: 100px;">
+        </div>
+        <div style="margin: auto;">
+            <h1>Calvin Library</h1>
+        </div>
+        <div class="button-1">
+            <form action="logout">
+                <input type="submit" value="logout" style="height: 50px; width: 150px; font-size: x-large;">
+            </form>
+        </div>
+    </div>
+    
+    <div class="search-bar" id="background-2">
+        {% if not_found %}
+        <div class="not-found">
+            <p>Not found</p>
+        </div>
+        {% endif %}
+        <form action="search" method="POST">
+            <table>
+                <tr>
+                    <td><input type="text" name="search"
+                            style="height: 30px; width: 350px; font-size: x-large; margin-top: 10px;"
+                            placeholder="Search Book"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="search"
+                            style="height: 30px; width: 358px; font-size: x-large;">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <section class="book-recommendation" id="background-2">
+        <div class="recom-text">
+            <h1>Book Recommendation</h1>
+        </div>
+        <div class="book-box">
+            <div class="book-list">
+                <img src="../static/images/The 48 Laws Of Power.png" alt="" style="height: 230px; width: 150px;"
+                    class="recom-book">
+            </div>
+            <div class="book-list">
+                <img src="../static/images/Zero to One.jpg" alt="" style="height: 230px; width: 150px;"
+                    class="recom-book">
+            </div>
+            <div class="book-list">
+                <img src="../static/images/The Richest Man in Babylon.jpg" alt=""
+                    style="height: 230px; width: 150px;" class="recom-book">
+            </div>
+            <div class="book-list">
+                <img src="../static/images/Critique of Pure Reason.png" alt="" style="height: 230px; width: 150px;"
+                    class="recom-book">
+            </div>
+            <div class="book-list">
+                <img src="../static/images/Critique of Practical Reason.png" alt=""
+                    style="height: 230px; width: 150px;" class="recom-book">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

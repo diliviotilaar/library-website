@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Registration Page</title>
+</head>
+
+<body>
+    <div class="navbar" id="background-1">
+        <div class="logo">
+            <img src="../static/images/CIT Logo.png" alt="" style="height: 130px; width: 100px;">
+        </div>
+        <div style="margin: auto;">
+            <h1>Calvin Library</h1>
+        </div>
+        <div class="button-1">
+            <form action="logout">
+                <input type="submit" value="logout" style="height: 50px; width: 150px; font-size: x-large;">
+            </form>
+            <form action="staff">
+                <input type="submit" value="back" style="height: 50px; width: 150px; font-size: x-large;">
+            </form>
+        </div>
+    </div>
+    <div class="staff-board" id="background-2">
+        <h1 style="font-size: xx-large; text-align: center;">Registrasi</h1>
+        <form action="registration" method="POST">
+            <table>
+                <tr>
+                    <td><input type="text" name="nama_mahasiswa" style="height: 50px; width: 250px; font-size: x-large;"
+                            placeholder="Nama Mahasiswa"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="password" style="height: 50px; width: 250px; font-size: x-large;"
+                            placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="registration"
+                            style="height: 50px; width: 250px; font-size: x-large;"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

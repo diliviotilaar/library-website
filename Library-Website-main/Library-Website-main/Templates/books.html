@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search Results Page</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body>
+    <div class="box">box</div>
+    <div class="navbar" id="background-1">
+        <div class="logo">
+            <img src="../static/images/CIT Logo.png" alt="" style="height: 130px; width: 100px;">
+        </div>
+        <div style="margin: auto;">
+            <h1>Calvin Library</h1>
+        </div>
+        <div class="button-1">
+            <form action="logout">
+                <input type="submit" value="logout" style="height: 50px; width: 150px; font-size: x-large;">
+            </form>
+        </div>
+    </div>
+    {% for book in book_list %}
+    <div class="book-grid">
+        <img src="{{ book.gambar}}" alt="Deskripsi Gambar" style="height: 350px; width: 225pxpx;">
+        <div class="book-description" id="background-2" style="padding: 10px;"> 
+            <table class="book-table">
+                <tr>
+                    <th class="custom">Nama Buku</th>
+                    <th class="custom">Kategori</th>
+                    <th class="custom">Penulis</th>
+                    <th class="custom">Penerbit</th>
+                </tr>
+                <tr>
+                    <td class="custom">{{ book.nama_buku }}</td>
+                    <td class="custom">{{ book.kategori }}</td>
+                    <td class="custom">{{ book.penulis }}</td>
+                    <td class="custom">{{ book.penerbit }}</td>
+                </tr>
+            </table>
+            <table style="border: solid;">
+                <tr>
+                    <th class="custom">Sinopsis</th>
+                </tr>
+                <tr>
+                    <td class="custom">{{ book.sinopsis }}</td>
+                </tr>
+            </table>
+                
+        </div>
+    </div>
+    {% endfor %}
+    <form action="home" style="text-align: center;">
+        <input type="submit" value="Home" style="height: 50px; width: 200px; font-size: x-large;">
+    </form>
+</body>
+
+</html>
